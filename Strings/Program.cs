@@ -19,7 +19,7 @@ namespace Strings
 
             
 
-            if (Alice.Contains((input)))
+            if (Alice.Contains(input))
             {
                 Console.WriteLine("true");
             }
@@ -28,7 +28,7 @@ namespace Strings
                 Console.WriteLine("false");
             }
             //Console.WriteLine(first_sentence);
-            //Console.ReadLine();
+            Console.ReadLine();
 
         }
     }
