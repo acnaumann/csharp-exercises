@@ -6,6 +6,7 @@ namespace Strings
     {
         public static void Main(string[] args)
         {
+            //int indexOfSearchTerm;
             Console.WriteLine("Hello World!");
 
             string Alice = "Alice was beginning to get very tired of sitting by her sister on the bank, " +
@@ -13,11 +14,15 @@ namespace Strings
                 "but it had no pictures or conversations in it, 'and what is the use of a book,' " +
                 "thought Alice 'without pictures or conversation?'";
 
-            Console.WriteLine("Enter a phrase to check: ");
+            Console.WriteLine("Enter search term: ");
 
             string input = Console.ReadLine();
 
-            
+            //IndexOfSearchTerm = sentence.IndexOf(SearchTerm);
+            //Console.WriteLine("Index" + indexOfSearchTerm);
+            //Console.WriteLine("Was term found?" + (indexOfSearchTerm >= 0));
+
+
 
             if (Alice.Contains(input))
             {
@@ -27,7 +32,7 @@ namespace Strings
             {
                 Console.WriteLine("false");
             }
-            //Console.WriteLine(first_sentence);
+            
             Console.ReadLine();
 
         }

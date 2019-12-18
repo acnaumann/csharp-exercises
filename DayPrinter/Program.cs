@@ -12,10 +12,9 @@ namespace DayPrinter
         {
             Console.WriteLine("Enter an integer: ");
             string input = Console.ReadLine();
-            int dayNum = int.Parse(input);
 
             string day;
-            switch (dayNum)
+            switch (int.Parse(input))
             {
                 case 0:
                     day = "Sunday";
