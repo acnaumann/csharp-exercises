@@ -62,18 +62,43 @@ namespace School
             return Name + " (Credits: " + NumberOfCredits + ", GPA: " + Gpa + ")";
         }
 
-        public override bool Equals(object o)
+        public override bool Equals(object obj)
         {
             bool compare = false;
-            Student studentObj = o as Student;
+            Student studentObj;
             //return StudentId == studentObj.StudentId;
 
-            if this.StudentId == studentObj.StudentId && this.Name == studentObj.Name)
+            if (obj == null || (obj.GetType() != this.GetType()))
+            {
+                return false;
+            }
+
+            //if (obj == null)
+            //{
+            //    return false;
+            //}
+
+            //if (obj.GetType() != this.GetType())
+            //{
+            //    return false;
+            //}
+
+            studentObj = obj as Student;
+
+            if (this.StudentId == studentObj.StudentId && this.Name == studentObj.Name)
             {
                 compare = true;
             }
             return compare;
 
+        }
+
+        //if you write your own equals method you should write your own gethash method so that if you
+        //have two equal objects they will have the same hash code.
+
+        public override int GetHashCode()
+        {
+            return (Name.GetHashCode()*1000) + StudentId;
         }
     }
 
@@ -148,6 +173,9 @@ namespace School
             Console.WriteLine("1 " + st.Equals(st2));
             Console.WriteLine("2 " + st.Equals(st4));
             Console.WriteLine("3 " + st.Equals(new Student("Alysson", 0)));
+
+            Console.WriteLine(st.GetHashCode() + " " + st2.GetHashCode());
+            Console.WriteLine(new Student("Alysson", 0).GetHashCode());
         }
     }
 }
