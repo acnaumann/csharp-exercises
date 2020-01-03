@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace TempConv
 {
     class Program
@@ -11,7 +12,7 @@ namespace TempConv
             double celcius;
             string input;
 
-            Console.WriteLine("Tempperature in F:");
+            Console.WriteLine("Temperature in F:");
             input = Console.ReadLine();
             fahrenheit = double.Parse(input);
 
