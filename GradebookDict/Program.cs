@@ -26,7 +26,7 @@ namespace GradebookDict
                 }
             }
             while (newStudent != "");
-
+            
             // Print class roster
             Console.WriteLine("\nClass roster:");
             foreach (KeyValuePair<string, double> student in students)

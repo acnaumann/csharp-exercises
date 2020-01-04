@@ -10,7 +10,7 @@ namespace GradebookArray
         public static void Main(string[] args)
         {
             // Allow for at most 30 students
-            int maxStudents = 30;
+            int maxStudents = 5;
 
             string[] students = new string[maxStudents];
             double[] grades = new double[maxStudents];
